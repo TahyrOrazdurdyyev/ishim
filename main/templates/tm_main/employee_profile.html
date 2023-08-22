@@ -1,0 +1,79 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block content %}
+<div class="container__main pad-0 w-1920">
+   {% include 'tm_main/header_employee.html' %}
+   <div class="priv__data mt-60">
+      <div class="container__content">
+         <div class="priv__data__inner" id="delete__wrap">
+            <h1 class="priv__data__title">Şahsy maglumatlar</h1>
+
+            <div class="priv__data__item">
+               <div>Ady</div>
+               <div>{{ request.user.employee.first_name }}</div>
+
+               <a href="{% url 'edit-first-name-tm' %}" class="priv__data__item__action">üýtgetmek</a>
+               <a href="{% url 'edit-first-name-tm' %}" class="priv__data__item__action__mob">
+                  <img src="{% static 'images/pen__pic.svg' %}" alt="Sorry got some error">
+               </a>
+            </div>
+
+            <div class="priv__data__item">
+               <div>Familiýa</div>
+               <div>{{ request.user.employee.last_name }}</div>
+
+               <a href="{% url 'edit-last-name-tm' %}" class="priv__data__item__action">üýtgetmek</a>
+               <a href="{% url 'edit-last-name-tm' %}" class="priv__data__item__action__mob">
+                  <img src="{% static 'images/pen__pic.svg' %}" alt="Sorry got some error">
+               </a>
+            </div>
+
+            <div class="priv__data__item">
+               <div>elektron poçta</div>
+               <div>{{ request.user.email }}</div>
+
+               <a href="#" class="priv__data__item__action">üýtgetmek</a>
+               <a href="#" class="priv__data__item__action__mob">
+                  <img src="{% static 'images/pen__pic.svg' %}" alt="Sorry got some error">
+               </a>
+            </div>
+
+            <div class="priv__data__item">
+               <div>Telefon</div>
+               <div>{{ request.user.employee.phone_num }}</div>
+
+               <a href="{% url 'edit-phone-tm' %}" class="priv__data__item__action">üýtgetmek</a>
+               <a href="{% url 'edit-phone-tm' %}" class="priv__data__item__action__mob">
+                  <img src="{% static 'images/pen__pic.svg' %}" alt="Sorry got some error">
+               </a>
+            </div>
+
+            <div class="priv__data__item">
+               <div>Parol</div>
+               <div>********</div>
+
+               <a href="{% url 'edit-password-tm' %}" class="priv__data__item__action">üýtgetmek</a>
+               <a href="{% url 'edit-password-tm' %}" class="priv__data__item__action__mob">
+                  <img src="{% static 'images/pen__pic.svg' %}" alt="Sorry got some error">
+               </a>
+            </div>
+
+            <div class="priv__data__item">
+               <div>Şäher</div>
+               <div>{{ request.user.employee.city }}</div>
+
+               <a href="{% url 'edit-city-tm' %}" class="priv__data__item__action">üýtgetmek</a>
+               <a href="{% url 'edit-city-tm' %}" class="priv__data__item__action__mob">
+                  <img src="{% static 'images/pen__pic.svg' %}" alt="Sorry got some error">
+               </a>
+            </div>
+
+            <div class="priv__data__item__action" id="delete__btn">Akkaundymy pozmak</div>
+
+         </div>
+      </div>
+   </div>
+</div>
+<script src="{% static 'tm_scripts/header.js' %}"></script>
+<script src="{% static 'tm_scripts/delete_account.js' %}"></script>
+{% endblock %}
