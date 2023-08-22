@@ -44,10 +44,10 @@
    {% if user.employee %}
    {% include 'tm_main/header_employee.html' %}
    {% endif %}
-   <div class="article bottom_mb">
+   <div class="article">
       <div class="container__content">
          <div class="article__inner" id="article__btn__wrapper">
-            <h1 class="h__fav__top__title">Makalalar</h1>
+            <h1 class="h__fav__top__title">Saýlanan Makalalar</h1>
             {% for article in object_list %}
             <div class="article__item">
                <h1 class="article__title"><a href="{% url 'article-detail-tm' article.id %}">{{ article.title }}</a>
