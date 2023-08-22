@@ -22,35 +22,46 @@
                <div class="user-info-block">
                   <h2>Wezipe </h2>
                   <div class="user-inp-blok">
-                     <input required type="text" class="user-text" value="{{ vacancy.position }}" placeholder=""
-                        name="position" id="user__position">
+                     <input required type="text" class="user-text" value="" placeholder="" name="position"
+                        id="user__position">
                   </div>
                </div>
 
                <div class="user-info-block" id="industry__wrapper">
                   <h2>Işiň ugry </h2>
-                  <div class="user-inp-blok">
-                     <input required type="text" class="user-text" value="{{ vacancy.sphere }}" placeholder="IT"
-                        name="sphere" id="user__position">
-                  </div>
+                  <select required name="sphere" id="user__industry" class="user-text user-select-bg">
+                     <option value="IT, Dizaýn">IT, Dizaýn</option>
+                     <option value="Maliýe, buhgalteriýa">Maliýe, buhgalteriýa</option>
+                     <option value="Sungat, tomaşa, metbugat">Sungat, tomaşa, metbugat</option>
+                     <option value="Gözellik, sport">Gözellik, sport</option>
+                     <option value="Logistika">Logistika</option>
+                     <option value="- Marketing, Söwda, PR, SMM">- Marketing, Söwda, PR, SMM</option>
+                     <option value="Lukmançylyk ">Lukmançylyk</option>
+                     <option value="Energetika">Energetika</option>
+                     <option value="Bilim">Bilim</option>
+                     <option value="Gorag, howpsuzlyk">Gorag, howpsuzlyk</option>
+                     <option value="Gurluşyk">Gurluşyk</option>
+                     <option value="Syýahatçylyk">Syýahatçylyk</option>
+                     <option value="Enjam hyzmaty">Enjam hyzmaty</option>
+                     <option value="Hukuk">Hukuk</option>
+                     <option value="Başga">Başga</option>
+                  </select>
 
                </div>
-
                <div class="user-info-block">
                   <h2>Nähili aýlyk hödürleýärsiňiz?</h2>
-
                   <div class="user-inp-blok-year">
                      <div class="user-inp-blok-salary__item user-inp-blok-year__item">
                         <span>min</span>
-                        <input required type="text" class="user-text-w45" value="{{ vacancy.min_salary }}"
-                           name="min_salary" id="user__age__min">
+                        <input required type="text" class="user-text-w45" value="" name="min_salary"
+                           id="user__age__min">
                         <span>manat</span>
                      </div>
                      <div class="user-inp-blok-salary__row"></div>
                      <div class="user-inp-blok-salary__item  user-inp-blok-year__item">
                         <span>max</span>
-                        <input required type="text" class="user-text-w45" value="{{ vacancy.max_salary }}"
-                           name="max_salary" id="user__age__max">
+                        <input required type="text" class="user-text-w45" value="" name="max_salary"
+                           id="user__age__max">
                         <span>manat</span>
                      </div>
                   </div>
@@ -59,7 +70,6 @@
                <div class="user-info-block" id="user__registration__wrapper">
                   <h2>ýaşaýan ýeriň ýazgysy </h2>
                   <select required name="registration" id="user__registration" class="user-text user-select-bg">
-                     <option selected value="{{ vacancy.registration }}">{{ vacancy.registration }}</option>
                      <option value="Aşgabat">Aşgabat</option>
                      <option value="Anau">Anau</option>
                      <option value="Baharden">Baharden</option>
@@ -72,20 +82,18 @@
                      <option value="Çardjou">Çardjou</option>
                      <option value="Mary">Mary</option>
                      <option value="Daşoguz">Daşoguz</option>
-                     <option value="anothr__city">wajib däl </option>
+                     <option value="anothr__city">wajib däl</option>
                   </select>
                </div>
 
                <div class="user-info-block">
                   <h2>Iş tejribesi</h2>
                   <div class="user__exp__block" id="user__exp__wrapper">
-                     <input required type="radio" id="exp1" value="{{ vacancy.experience }}" name="experience" checked>
-                     <label for="exp1" class="user__exp__item">{{ vacancy.experience }}</label>
 
                      <input required type="radio" id="exp1" value="wajib däl " name="experience">
-                     <label for="exp1" class="user__exp__item">wajib däl </label>
+                     <label for="exp1" class="user__exp__item">wajib däl</label>
 
-                     <input required type="radio" id="exp2" value="нет опыта" name="experience">
+                     <input required type="radio" id="exp2" value="tejribe ýok" name="experience">
                      <label for="exp2" class="user__exp__item">tejribe ýok</label>
 
                      <input required type="radio" id="exp3" value="1 - 3 ýyl" name="experience">
@@ -104,15 +112,13 @@
                   <div class="user-inp-blok-year">
                      <div class="user-inp-blok-salary__item user-inp-blok-year__item">
                         <span>min</span>
-                        <input required type="text" class="user-text-w45" value="{{ vacancy.min_age }}" name="min_age"
-                           id="user__age__min">
+                        <input required type="text" class="user-text-w45" value="" name="min_age" id="user__age__min">
                         <span>ýaşdan</span>
                      </div>
                      <div class="user-inp-blok-salary__row"></div>
                      <div class="user-inp-blok-salary__item  user-inp-blok-year__item">
                         <span>max</span>
-                        <input required type="text" class="user-text-w45" value="{{ vacancy.max_age }}" name="max_age"
-                           id="user__age__max">
+                        <input required type="text" class="user-text-w45" value="" name="max_age" id="user__age__max">
                         <span>ýaş</span>
                      </div>
                   </div>
@@ -121,16 +127,13 @@
                <div class="user-info-block">
                   <h2>Jyns</h2>
                   <div class="user-gender-block" id="gender__block__wrapper">
-                     <input required type="radio" id="man-id" value="Erkek" name="sex" {% if vacancy.sex=="Мужчина" %}
-                        checked {% endif %}>
+                     <input required type="radio" id="man-id" value="Erkek" name="sex">
                      <label for="man-id" class="user-gender">Erkek</label>
 
-                     <input required type="radio" id="woman-id" value="Aýal" name="sex" {% if vacancy.sex=="Женщина" %}
-                        checked {% endif %}>
+                     <input required type="radio" id="woman-id" value="Aýal" name="sex">
                      <label for="woman-id" class="user-gender">Aýal</label>
 
-                     <input required type="radio" id="no_matter" value="möhüm däl" name="sex" {% if
-                        vacancy.sex=="Не имеет значения" %} checked {% endif %}>
+                     <input required type="radio" id="no_matter" value="möhüm däl" name="sex">
                      <label for="no_matter" class="user-gender">möhüm däl</label>
                   </div>
                </div>
@@ -138,14 +141,10 @@
                <div class="user-info-block">
                   <h2 class="fw500">Bilim</h2>
                   <div class="user__exp__block" id="user__education__wrapper">
-
-                     <input required type="radio" id="educ1" value="{{ vacancy.education }}" name="education" checked>
-                     <label for="educ1" class="user__exp__item">{{ vacancy.education }}</label>
-
-                     <input required type="radio" id="educ1" value="среднее" name="education">
+                     <input required type="radio" id="educ1" value="orta" name="education">
                      <label for="educ1" class="user__exp__item">orta</label>
 
-                     <input required type="radio" id="educ2" value="средне-специальное" name="education">
+                     <input required type="radio" id="educ2" value="ýörite orta" name="education">
                      <label for="educ2" class="user__exp__item">ýörite orta</label>
 
                      <input required type="radio" id="educ3" value="gutarylmadyk ýokary " name="education">
@@ -167,7 +166,7 @@
 
                <div class="user-info-block" id="user__lang__btn__wrapper">
                   <h2 class="fw500 user-info-block-title">Diller bilimi</h2>
-                  {% for neededlanguage in vacancy.neededlanguage_set.all %}
+
                   <div id="user__lang__wrap">
                      <div class="user-info-block-subtitle">
                         <div>Dil</div>
@@ -176,9 +175,8 @@
 
                      <div class="user-info-block__lang__item">
                         <input type="text" class="user-info-block__lang__item__txt" name="language" id="user__lang"
-                           value="{{ neededlanguage.language }}" placeholder="Türkmen dili">
+                           placeholder="Türkmen dili">
                         <select name="level" id="lang__lev" class="user-info-block__lang__item__select">
-                           <option value="{{ neededlanguage.level }}" selected>{{ neededlanguage.level }}</option>
                            <option value="esasy">esasy</option>
                            <option value="gepleşik">gepleşik</option>
                            <option value="ýokary dereje">ýokary dereje</option>
@@ -186,7 +184,6 @@
                         </select>
                      </div>
                   </div>
-                  {% endfor %}
 
 
 
@@ -201,7 +198,7 @@
                   <h2 class="fw500 user-info-block-title">Jogapkärçilikler</h2>
                   <div class="user__info__block__txt__area__wrapper">
                      <textarea name="responsibilities" id="user__job__resp" class="user-info-block-txtarea"
-                        placeholder="Işgäriň ýerine ýetirmeli borçlaryny we wezipelerini beýan ediň">{{ vacancy.responsibilities }}</textarea>
+                        placeholder="Işgäriň ýerine ýetirmeli borçlaryny we wezipelerini beýan ediň"></textarea>
                   </div>
                </div>
 
@@ -210,7 +207,7 @@
                   <h2 class="fw500 user-info-block-title">Iş şertleri</h2>
                   <div class="user__info__block__txt__area__wrapper">
                      <textarea name="work_terms" id="user__working__conditions" class="user-info-block-txtarea2"
-                        placeholder="Işgäriňiziň haýsy häsiýetleri we başarnyklary bolmalydygyny, we iş bilen baglanyşykly beýleki maglumatlary belläň.">{{ vacancy.work_terms }}</textarea>
+                        placeholder="Işgäriňiziň haýsy häsiýetleri we başarnyklary bolmalydygyny, we iş bilen baglanyşykly beýleki maglumatlary belläň."></textarea>
                   </div>
                </div>
 
@@ -218,9 +215,6 @@
                <div class="user-info-block">
                   <h2 class="fw500">işlemek</h2>
                   <div class="user__exp__block" id="user__busyness__wrapper">
-                     <input required type="radio" id="empl1" value="{{ vacancy.busyness }}" name="busyness" checked>
-                     <label for="empl1" class="user__exp__item">{{ vacancy.busyness }}</label>
-
                      <input required type="radio" id="empl1" value="doly işlemek" name="busyness">
                      <label for="empl1" class="user__exp__item">doly işlemek</label>
 
@@ -236,12 +230,8 @@
                </div>
 
                <div class="user-info-block">
-                  <h2 class="fw500">Iş wagty</h2>
+                  <h2 class="fw500">Iş wagty </h2>
                   <div class="user__exp__block" id="user__schedule__wrapper">
-                     <input required type="radio" id="schedule1" value="{{ vacancy.work_graph }}" name="work_graph"
-                        checked>
-                     <label for="schedule1" class="user__exp__item">{{ vacancy.work_graph }}</label>
-
                      <input required type="radio" id="schedule1" value="doly iş güni" name="work_graph">
                      <label for="schedule1" class="user__exp__item">doly iş güni</label>
 
@@ -262,17 +252,16 @@
                   </h2>
                   <div class="user__info__block__txt__area__wrapper">
                      <textarea name="payment" id="payment__additionally" class="user-info-block-txtarea"
-                        placeholder="Aýlyk ýa-da wezipäň ýokarlandyrmagy barada maglumat goşup bilersiňiz">{{ vacancy.payment }}</textarea>
+                        placeholder="Aýlyk ýa-da wezipäň ýokarlandyrmagy barada maglumat goşup bilersiňiz"></textarea>
                   </div>
 
                </div>
 
                <div class="user__contact__wrapper">
                   <h2 class="fw500 user-info-block-title">kontaktlar</h2>
-                  {% with content=vacancy.contact.content_as_list %}
                   <div class="user__contact__item">
-                     <input type="text" class="user__contact__inp" placeholder="Durdyew Ahmet" value="{{ content.0 }}"
-                        name="name" id="user__name">
+                     <input type="text" class="user__contact__inp" placeholder="Ahmet Orazow" value="" name="name"
+                        id="user__name">
                   </div>
 
                   <div class="user__contact__item">
@@ -280,15 +269,14 @@
                         <use xlink:href="#mob__pic" width="20" height="20" fill="none" stroke="rgba(0, 0, 0, 0.3)">
                         </use>
                      </svg>
-                     <input required type="text" class="user__contact__inp" placeholder="+993..."
-                        value="{{ content.1 }}" name="phone_number" id="user__number">
+                     <input required type="text" class="user__contact__inp" placeholder="+993..." value="+993 "
+                        name="phone_number" id="user__number">
                   </div>
                   <div class="user__contact__item">
                      <span class="mr5">&#9993;</span>
-                     <input type="text" class="user__contact__inp" placeholder="example.mail.com"
-                        value="{{ content.2 }}" name="email" id="user__email">
+                     <input type="text" class="user__contact__inp" placeholder="example.mail.com" value="" name="email"
+                        id="user__email">
                   </div>
-                  {% endwith %}
                </div>
                <input required type="submit" class="continue__btn purp__btn m-0auto" value="Dowam et" id="btn">
             </form>
