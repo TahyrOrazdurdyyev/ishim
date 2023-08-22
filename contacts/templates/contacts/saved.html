@@ -1,0 +1,10 @@
+{% extends "main/base.html" %} {% load static %} {% block content %}
+{% include 'main/header_employee.html' %}
+Контакты работодателя
+{% for contact in contacts %} {% with content=contact.content_as_list %}
+{{ content.0 }}
+{{ contact.vacancy.position }}
+Контакты
+ {{ content.1 }}
+✉{{ content.2 }}
+{% endwith %} {% endfor %}{% endblock %}
