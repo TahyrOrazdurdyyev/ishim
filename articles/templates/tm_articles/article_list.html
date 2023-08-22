@@ -1,0 +1,11 @@
+{% extends "main/base.html" %} {% load static %} {% block content %}
+{% if user.hirer %} {% include 'tm_main/header_hirer.html' %} {% endif %} {% if user.employee %} {% include 'tm_main/header_employee.html' %} {% endif %}
+Makalalar
+{% for article in object_list %}
+{{ article.title }}
+{{ article.content|truncatewords:25 }}
+
+Sorry got some error
+Sorry got some error
+{% endfor %}
+{% endblock %}
